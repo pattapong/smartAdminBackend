@@ -1,0 +1,1025 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectGuid>{0087782B-12CB-45BA-BF46-AF27A91530D4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>smartAdmin</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SmartAdmin</RootNamespace>
+    <TargetFrameworkVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web">
+      <HintPath>.\smartAdminReferences\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="smartAdminControls">
+      <HintPath>.\smartAdminReferences\smartAdminControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>.\smartAdminReferences\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>.\smartAdminReferences\System.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Authentication\BusinessLogin.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>BusinessLogin.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FontList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>FontList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TableList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TableList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuOptAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuOptAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Authentication\Login.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>Login.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TimeAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TimeAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Authentication\Logout.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>Logout.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuOptEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuOptEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Authentication\NoAuthorize.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>NoAuthorize.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\Employee.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ShiftEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ShiftEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TimeInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TimeInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TimeList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TimeList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuOptInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuOptInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuByEmp.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuByEmp.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuOptList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuOptList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuTypeAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuTypeAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuTypeEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuTypeEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuTypeInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuTypeInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuByNumber.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuByNumber.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuTypeList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuTypeList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PaymentAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PaymentAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PaymentEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PaymentEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuCancel.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuCancel.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PaymentInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PaymentInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PaymentList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PaymentList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuCancelDetail.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuCancelDetail.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\Master.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PromotionAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PromotionAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuChangeOption.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuChangeOption.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\Menu.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadTypeAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadTypeAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MenuChangeOptionDetail.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>MenuChangeOptionDetail.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadTypeEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadTypeEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\Promotion.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadTypeInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadTypeInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RoadTypeList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>RoadTypeList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PromotionEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PromotionEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SlipConfig.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SlipConfig.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewCustomer.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>NewCustomer.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\Report.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PromotioninInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PromotioninInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Employee\EmployeeAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SlipEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SlipEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PromotionList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PromotionList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GraphMonthly.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>GraphMonthly.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Employee\EmployeeChangeProfile.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeChangeProfile.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SlipInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SlipInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PartyByPeriod.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PartyByPeriod.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GraphYearly.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>GraphYearly.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SlipList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SlipList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesHistory.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesHistory.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TableAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TableAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesTipsToday.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesTipsToday.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PartyByUsage.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PartyByUsage.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TableEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TableEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Employee\EmployeeEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesToday.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesToday.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TableInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TableInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Global.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>Global.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SumMonth.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SumMonth.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>Home.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Employee\EmployeeInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PrintSlipOrder.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>PrintSlipOrder.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SumToday.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SumToday.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SumWeek.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SumWeek.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Employee\EmployeeList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReserveByPeriodDetail.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ReserveByPeriodDetail.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SumYear.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SumYear.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TopFavourites.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TopFavourites.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Employee\EmployeeSetPermission.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeSetPermission.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReserveTable.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ReserveTable.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaTypeAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaTypeAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utils\AdminMenu.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaTypeEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaTypeEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utils\ConnectDB.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesByDiscount.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesByDiscount.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaTypeInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaTypeInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utils\Pages.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaTypeList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaTypeList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utils\UserAuthorize.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AreaList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>AreaList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DescriptionConfig.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>DescriptionConfig.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utils\UserProfile.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DescriptionConfigEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>DescriptionConfigEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesByEmp.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesByEmp.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="EmployeeTypeAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeTypeAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="EmployeeTypeEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeTypeEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="EmployeeTypeInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeTypeInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesByOrderType.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesByOrderType.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="EmployeeTypeList.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>EmployeeTypeList.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FontAdd.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>FontAdd.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FontEdit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>FontEdit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FontInfo.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>FontInfo.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesByPayment.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesByPayment.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SalesByPeriod.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>SalesByPeriod.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServiceCheckInOut.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ServiceCheckInOut.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServiceCheckInOutDetail.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ServiceCheckInOutDetail.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServiceOrderServe.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ServiceOrderServe.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServiceOrderServeDetail.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ServiceOrderServeDetail.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TimeStampByEmp.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>TimeStampByEmp.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controls\ScheduleControl.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ScheduleControl.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\Business.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Authentication\BusinessLogin.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BusinessLogin.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TableList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOptAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuOptAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\Login.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\Logout.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Logout.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOptEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuOptEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication\NoAuthorize.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NoAuthorize.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ShiftEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOptInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuOptInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuByEmp.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuByEmp.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuOptList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuOptList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTypeAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuTypeAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTypeEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuTypeEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTypeInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuTypeInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuByNumber.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuByNumber.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTypeList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuTypeList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaymentAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaymentEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCancel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuCancel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaymentInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PaymentList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCancelDetail.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuCancelDetail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromotionAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PromotionAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuChangeOption.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuChangeOption.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadTypeAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadTypeAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuChangeOptionDetail.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuChangeOptionDetail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadTypeEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadTypeEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadTypeInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadTypeInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoadTypeList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoadTypeList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromotionEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PromotionEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlipConfig.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SlipConfig.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCustomer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NewCustomer.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromotioninInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PromotioninInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlipEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SlipEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromotionList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PromotionList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphMonthly.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GraphMonthly.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeChangeProfile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeChangeProfile.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlipInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SlipInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartyByPeriod.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PartyByPeriod.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphYearly.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GraphYearly.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlipList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SlipList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesHistory.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesHistory.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TableAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesTipsToday.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesTipsToday.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartyByUsage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PartyByUsage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TableEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesToday.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesToday.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TableInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Global.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumMonth.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SumMonth.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintSlipOrder.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintSlipOrder.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumToday.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SumToday.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumWeek.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SumWeek.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReserveByPeriodDetail.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReserveByPeriodDetail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumYear.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SumYear.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopFavourites.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TopFavourites.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeSetPermission.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeSetPermission.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReserveTable.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReserveTable.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaTypeAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaTypeAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaTypeEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaTypeEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesByDiscount.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesByDiscount.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaTypeInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaTypeInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaTypeList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaTypeList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AreaList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DescriptionConfig.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DescriptionConfig.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DescriptionConfigEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DescriptionConfigEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesByEmp.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesByEmp.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeTypeAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeTypeAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeTypeEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeTypeEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeTypeInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeTypeInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesByOrderType.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesByOrderType.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeTypeList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmployeeTypeList.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontAdd.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontAdd.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontEdit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontEdit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesByPayment.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesByPayment.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesByPeriod.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SalesByPeriod.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceCheckInOut.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServiceCheckInOut.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceCheckInOutDetail.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServiceCheckInOutDetail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOrderServe.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServiceOrderServe.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOrderServeDetail.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServiceOrderServeDetail.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeStampByEmp.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeStampByEmp.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScheduleControl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ScheduleControl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
