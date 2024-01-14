@@ -1371,5 +1371,83 @@ namespace SmartAdmin.Data
 			connection.Close();
 			return dataTable;
 		}
-	}
+
+        public static bool SmartclientDelete(int smartclientId)
+        {
+            SqlConnection connection = ConnectDB.GetConnection();
+            SqlCommand sqlCommand = new SqlCommand("deleteSmartclient", connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlParameter sqlParameter = sqlCommand.Parameters.Add("@id", SqlDbType.Int);
+            sqlParameter.Value = smartclientId;
+            SqlParameter sqlParameter1 = sqlCommand.Parameters.Add("@result", SqlDbType.Int);
+            sqlParameter1.Direction = ParameterDirection.Output;
+            sqlCommand.ExecuteNonQuery();
+            connection.Close();
+            sqlParameter1.Value.ToString();
+            return true;
+        }
+
+        public static bool SmartclientInsert(string smartclientId, string description, string localPrinter)
+        {
+            SqlConnection connection = ConnectDB.GetConnection();
+            SqlCommand sqlCommand = new SqlCommand("insertSmartclient", connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCommand.Parameters.Add("@id", SqlDbType.VarChar).Value = smartclientId;
+            sqlCommand.Parameters.Add("@smartclientdescription", SqlDbType.VarChar).Value = description;
+            sqlCommand.Parameters.Add("@localprinter", SqlDbType.VarChar).Value = localPrinter;
+            SqlParameter sqlParameter = sqlCommand.Parameters.Add("@result", SqlDbType.Int);
+            sqlParameter.Direction = ParameterDirection.Output;
+            sqlCommand.ExecuteNonQuery();
+            connection.Close();
+            sqlParameter.Value.ToString();
+            return true;
+        }
+
+        public static DataTable SmartclientList()
+        {
+            return SmartAdmin.Data.Master.SmartclientList(0);
+        }
+
+        public static DataTable SmartclientList(int smartclientId)
+        {
+            SqlConnection connection = ConnectDB.GetConnection();
+            SqlCommand sqlCommand = new SqlCommand("getSmartclient", connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlParameter sqlParameter = sqlCommand.Parameters.Add("@id", SqlDbType.Int);
+            sqlParameter.Value = smartclientId;
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter()
+            {
+                SelectCommand = sqlCommand
+            };
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            connection.Close();
+            return dataTable;
+        }
+
+        public static bool SmartclientUpdate(int smartclientId, string description, string localPrinter)
+        {
+            SqlConnection connection = ConnectDB.GetConnection();
+            SqlCommand sqlCommand = new SqlCommand("updateSmartclient", connection)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            SqlParameter sqlParameter = sqlCommand.Parameters.Add("@id", SqlDbType.Int);
+            sqlParameter.Value = smartclientId;
+            sqlCommand.Parameters.Add("@smartclientdescription", SqlDbType.VarChar).Value = description;
+            sqlCommand.Parameters.Add("@localprinter", SqlDbType.VarChar).Value = localPrinter;
+            SqlParameter sqlParameter1 = sqlCommand.Parameters.Add("@result", SqlDbType.Int);
+            sqlParameter1.Direction = ParameterDirection.Output;
+            sqlCommand.ExecuteNonQuery();
+            connection.Close();
+            sqlParameter1.Value.ToString(); 
+            return true;
+        }
+    }
 }
