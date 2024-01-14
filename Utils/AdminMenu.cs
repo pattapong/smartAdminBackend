@@ -103,7 +103,7 @@ namespace SmartAdmin.Utils
 
 		private static void SetCopyright(Control control, CopyrightBox copyright)
 		{
-			copyright.Text = "Copyright &copy; 2004 smartService Solution. All rights reserved.";
+			copyright.Text = "Copyright &copy; 2024 smartService Solution. All rights reserved.";
 			if (UserAuthorize.GetUserProfile(control) != null)
 			{
 				copyright.EmployeeID = UserAuthorize.GetUserProfile(control).EmployeeID;

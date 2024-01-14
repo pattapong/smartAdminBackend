@@ -91,7 +91,13 @@ namespace SmartAdmin.Utils
 
 		public static string MAS_AREA_EDIT_PAGE;
 
-		public static string MENU_LIST_PAGE;
+        public static string MAS_SMARTCLIENT_LIST_PAGE;
+
+        public static string MAS_SMARTCLIENT_ADD_PAGE;
+
+        public static string MAS_SMARTCLIENT_EDIT_PAGE;
+
+        public static string MENU_LIST_PAGE;
 
 		public static string MENU_ADD_PAGE;
 
@@ -180,7 +186,10 @@ namespace SmartAdmin.Utils
 			Pages.MAS_AREA_LIST_PAGE = "/Master/AreaList.aspx";
 			Pages.MAS_AREA_ADD_PAGE = "/Master/AreaAdd.aspx";
 			Pages.MAS_AREA_EDIT_PAGE = "/Master/AreaEdit.aspx";
-			Pages.MENU_LIST_PAGE = "/Menu/MenuList.aspx";
+            Pages.MAS_SMARTCLIENT_LIST_PAGE = "/Master/SmartclientList.aspx";
+            Pages.MAS_SMARTCLIENT_ADD_PAGE = "/Master/SmartclientAdd.aspx";
+            Pages.MAS_SMARTCLIENT_EDIT_PAGE = "/Master/SmartclientEdit.aspx";
+            Pages.MENU_LIST_PAGE = "/Menu/MenuList.aspx";
 			Pages.MENU_ADD_PAGE = "/Menu/MenuAdd.aspx";
 			Pages.MENU_EDIT_PAGE = "/Menu/MenuEdit.aspx";
 			Pages.PRO_LIST_PAGE = "/Promotion/PromotionList.aspx";
